@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФармИнфо - Каталог препаратов</title>
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">ФармИнфо</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог препаратов</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="search-bar">
+        <div class="container">
+            <form class="search-form">
+                <input type="text" placeholder="Поиск препаратов...">
+                <button type="submit">Поиск</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>></span>
+                <a href="catalog.html">Каталог препаратов</a>
+            </div>
+            <h1>Каталог лекарственных препаратов</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="catalog-container">
+            <div class="sidebar">
+                <h2>Категории</h2>
+                <ul class="category-list">
+                    <li><a href="#">Антибиотики</a></li>
+                    <li><a href="#">Анальгетики</a></li>
+                    <li><a href="#">Противовирусные</a></li>
+                    <li><a href="#">Витамины и минералы</a></li>
+                    <li><a href="#">Сердечно-сосудистые</a></li>
+                    <li><a href="#">Желудочно-кишечные</a></li>
+                    <li><a href="#">Противоаллергические</a></li>
+                    <li><a href="#">Дерматологические</a></li>
+                    <li><a href="#">Назальные препараты</a></li>
+                    <li><a href="#">Глазные капли</a></li>
+                </ul>
+                
+                <div class="filter-section">
+                    <h3>Цена</h3>
+                    <div class="price-filter">
+                        <input type="number" placeholder="от">
+                        <input type="number" placeholder="до">
+                    </div>
+                    
+                    <h3>Наличие</h3>
+                    <div class="checkbox-filter">
+                        <label>
+                            <input type="checkbox" checked> В наличии
+                        </label>
+                        <label>
+                            <input type="checkbox"> Под заказ
+                        </label>
+                    </div>
+                    
+                    <h3>Производитель</h3>
+                    <div class="checkbox-filter">
+                        <label>
+                            <input type="checkbox"> Отечественные
+                        </label>
+                        <label>
+                            <input type="checkbox"> Импортные
+                        </label>
+                    </div>
+                    
+                    <h3>Рецептурные</h3>
+                    <div class="checkbox-filter">
+                        <label>
+                            <input type="checkbox"> По рецепту
+                        </label>
+                        <label>
+                            <input type="checkbox"> Без рецепта
+                        </label>
+                    </div>
+                    
+                    <button class="filter-button">Применить фильтры</button>
+                </div>
+            </div>
+            
+            <div class="catalog-content">
+                <div class="sorting">
+                    <div class="sort-options">
+                        <label>Сортировать по:</label>
+                        <select id="sort-select">
+                            <option value="price-asc">Цене (низкая - высокая)</option>
+                            <option value="price-desc">Цене (высокая - низкая)</option>
+                        </select>
+                        
+                    </div>
+                    <div class="view-options">
+                        <div class="view-option active">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </div>
+                        <div class="view-option">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="21" y1="4" x2="3" y2="4"></line>
+                                <line x1="21" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="20" x2="3" y2="20"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-grid">
+                    <!-- Препарат 1 -->
+                    <div class="product-card"
+                        data-price="12" 
+                        data-availability="В наличии" 
+                        data-producer="Отечественный" 
+                        data-prescription="По рецепту"
+                        data-category="Антибиотики">
+                        <div class="product-image">
+                            <img src="https://ft.by/wp-content/uploads/drugs/amoksicillin-ft_image2.png" alt="Амоксициллин" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Амоксициллин</div>
+                            <div class="product-description">Антибиотик широкого спектра действия, 500 мг, 20 таблеток</div>
+                            <div class="product-price">12 azn</div>
+                            <div class="product-availability in-stock">В наличии</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=1" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Препарат 2 -->
+                    <div class="product-card"
+                        data-price="8" 
+                        data-availability="В наличии" 
+                        data-producer="Отечественный" 
+                        data-prescription="По рецепту"
+                        data-category="Противовоспалительные">
+                        <div class="product-image">
+                            <img src="https://borimed.com/sites/default/files/product/%D0%98%D0%B1%D1%83%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D0%BD-200-new.jpg" alt="Ибупрофен" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Ибупрофен</div>
+                            <div class="product-description">Противовоспалительное средство, 200 мг, 50 таблеток</div>
+                            <div class="product-price">8 azn</div>
+                            <div class="product-availability in-stock">В наличии</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=2" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Препарат 3 -->
+                    <div class="product-card"
+                        data-price="9"
+                        data-availability="Мало"
+                        data-producer="Отечественный"
+                        data-prescription="По рецепту"
+                        data-category="Жаропонижающие">
+                        <div class="product-image">
+                            <img src="https://farmakopeika.ru/storage/products/Ee6HyzZOHqP0Dtfr2oHtb6LqtggClXM7PtbnJozI.png" alt="Панадол" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Панадол</div>
+                            <div class="product-description">Жаропонижающее средство, 500 мг, 12 таблеток</div>
+                            <div class="product-price">9 azn</div>
+                            <div class="product-availability limited-stock">Осталось мало</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=3" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <!-- Препарат 4 -->
+                    <div class="product-card"
+                        data-price="11"
+                        data-availability="В наличии"
+                        data-producer="Отечественный"
+                        data-prescription="По рецепту"
+                        data-category="Обезболивающие">
+                        <div class="product-image">
+                            <img src="https://farmakopeika.ru/storage/products/HmJL1j7ekCBcJpe2w3dqYRXsUeknV7FSyMm31TSu.png" alt="Нурофен" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Нурофен</div>
+                            <div class="product-description">Обезболивающее средство, 200 мг, 20 таблеток</div>
+                            <div class="product-price">11 azn</div>
+                            <div class="product-availability in-stock">В наличии</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=4" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <!-- Препарат 5 -->
+                    <div class="product-card"
+                        data-price="14"
+                        data-availability="В наличии"
+                        data-producer="Отечественный"
+                        data-prescription="По рецепту"
+                        data-category="Противоаллергические">
+                        <div class="product-image">
+                            <img src="https://samson-pharma.ru/_next/image/?url=https%3A%2F%2Fpics.erkapharm.com%2Fimages%2Fgoods%2F79448%2Fmain.jpg&w=732&q=75" alt="Цетрин" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Цетрин</div>
+                            <div class="product-description">Противоаллергическое средство, 10 мг, 30 таблеток</div>
+                            <div class="product-price">14 azn</div>
+                            <div class="product-availability in-stock">В наличии</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=5" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <!-- Препарат 6 -->
+                    <div class="product-card"
+                        data-price="10"
+                        data-availability="В наличии"
+                        data-producer="Отечественный"
+                        data-prescription="По рецепту"
+                        data-category="Противоязвенные">
+                        <div class="product-image">
+                            <img src="https://borimed.com/sites/default/files/product/kapsuly-omeprazol.jpg" alt="Омепразол" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Омепразол</div>
+                            <div class="product-description">Противоязвенное средство, 20 мг, 30 капсул</div>
+                            <div class="product-price">10 azn</div>
+                            <div class="product-availability in-stock">В наличии</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=6" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <!-- Препарат 7 -->
+                    <div class="product-card"
+                        data-price="20"
+                        data-availability="В наличии"
+                        data-producer="Отечественный"
+                        data-prescription="По рецепту"
+                        data-category="Витамины">
+                        <div class="product-image">
+                            <img src="https://qcdn.zdesapteka.ru/upload/resize_cache/iblock/296/400_400_140cd750bba9870f18aada2478b24840a/2961bd9c34ba8764142ce8675ae471e3.jpg" alt="Супрадин" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Супрадин</div>
+                            <div class="product-description">Поливитаминный комплекс, 30 таблеток</div>
+                            <div class="product-price">20 azn</div>
+                            <div class="product-availability in-stock">В наличии</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=7" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <!-- Препарат 8 -->
+                    <div class="product-card"
+                        data-price="9"
+                        data-availability="В наличии"
+                        data-producer="Отечественный"
+                        data-prescription="По рецепту"
+                        data-category="Анальгетики">
+                        <div class="product-image">
+                            <img src="https://healthplanet.by/upload/cacheResize/2f7/b52/1be7d89cf4bd7baddf9a49ccd8dbc9f1.jpg" alt="Аспирин" height=200px width=300px>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Аспирин</div>
+                            <div class="product-description">Ацетилсалициловая кислота, 500 мг, 20 таблеток</div>
+                            <div class="product-price">9 azn</div>
+                            <div class="product-availability in-stock">В наличии</div>
+                            <div class="product-action">
+                                <a href="product-detail.html?id=8" class="details-link">Подробнее</a>
+                                <a href="#" class="pharmacy-link">Аптеки</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Наша миссия</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="#">Как пользоваться</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Правовая информация</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Телефон поддержки</a></li>
+                        <li><a href="#">Электронная почта</a></li>
+                        <li><a href="#">Социальные сети</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Для аптек</h3>
+                    <ul>
+                        <li><a href="#">Как стать партнером</a></li>
+                        <li><a href="#">Личный кабинет</a></li>
+                        <li><a href="#">Обновление данных</a></li>
+                        <li><a href="#">Реклама на сайте</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 ФармИнфо. Все права защищены.
+            </div>
+        </div>
+    </footer>
+<script src="catalog.js"></script>
+</body>
+</html>
